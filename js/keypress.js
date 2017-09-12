@@ -11,6 +11,9 @@ var key = document.getElementById('key');
 var keyCode = document.getElementById('keyCode');
 var type = document.getElementById('type');
 
+var preventdefault = document.getElementById('preventdefault');
+var stoppropagation = document.getElementById('stoppropagation');
+
 document.addEventListener('keypress', (e) => {
   display.textContent = e.key;
   altKey.textContent = e.altKey;
@@ -22,4 +25,6 @@ document.addEventListener('keypress', (e) => {
   key.textContent = e.key;
   keyCode.textContent = e.keyCode;
   type.textContent = e.type;
+  if ( preventdefault.checked ){ e.preventDefault(); }
+  if ( stoppropagation.checked ){ e.stopPropagation(); }
 });

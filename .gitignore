@@ -9,3 +9,6 @@ Session.vim
 # ignore tag files
 tags
 .tags
+
+# ignore todo
+[tT][oO][dD][oO]*
